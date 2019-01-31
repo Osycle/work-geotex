@@ -54,59 +54,6 @@
 		}
 	}
 }
-.socicons{
-	font-size: 20px;
-	li{
-		margin: 0 5px;
-		display: inline-block;
-		border: 1px solid white;
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		border-radius: 3px;
-		&:last-child{
-			margin-right: 0;
-		}
-		a{
-			display: flex;
-			height: 100%;
-			align-items: center;
-			i{
-				width: 100%;
-			}
-		}
-		&:hover{
-			background-color: $color-1;
-			border-color: $color-2;
-			color: $color-2;
-		}
-	}
-	.fa-paper-plane{
-		font-size: 14px;
-	}
-	.fa-vk{
-		font-size: 15px;
-	}
-	.fa-facebook{
-		font-size: 16px;
-	}
-}
-
-
-
-.input-icon{
-	position: relative;
-  display: flex;
-  align-items: center;
-  input{
-  	padding-right: 30px;
-  	padding-left: 30px;
-  }
-	[class*="ls-icon"]{
-		position: absolute;
-		padding:0 10px;
-	}
-}
 
 
 
