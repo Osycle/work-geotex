@@ -6,7 +6,7 @@
 
 $color-1: #ed1c24 !default;
 $color-2: #c20007 !default;
-$color-3: #3a82db !default;
+$color-3: darken(#c20007, 5%) !default;
 $color-4: #e17b31 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
@@ -534,6 +534,7 @@ table {
 	display: inline-block;
 	white-space: nowrap;
 	text-align: center;	
+	text-transform: uppercase;
 	font-family: $font-family-1;
 	&.text-wrap{
 		white-space: wrap;
@@ -582,7 +583,7 @@ table {
 	}
 	&:not([class*="bg-color"]){
 		background-color: $color-1;
-	}
+	}	
 	&:not(.changecolor-none):hover{
 		background-color: $color-3;
 	}
