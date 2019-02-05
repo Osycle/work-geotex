@@ -166,7 +166,7 @@
 
 
 
-		var arrowStyle = "M 10,50 L 65,100 L 70,90 L 25,50  L 70,10 L 65,0 Z";
+		var arrowStyle = "M 30,50 L 70,80 L 70,80 L 70,50  L 70,20 L 70,20 Z";
 
 		/*bnr-carousel*/
 		if( $(".bnr-carousel .carousel-items figure").length ){
@@ -212,6 +212,26 @@
 		
 
 
+	    //short-partners-carousel
+	    if ($(".short-productions-carousel .carousel-items figure").length > 1 || checkSm())
+	      $('.short-productions-carousel .carousel-items').flickity({
+	        imagesLoaded: true,
+	        autoPlay: 3000,
+	        //groupCells: 3,
+	        freeScroll: false,
+	        pauseAutoPlayOnHover: true,
+	        arrowShape: arrowStyle,
+	        initialIndex: Math.round($(".short-partners-carousel .carousel-items figure").length / 2),
+	        prevNextButtons: true,
+	        draggable: false,
+	        adaptiveHeight: true, 
+	        wrapAround: false,
+	        pageDots: !checkSm(),
+	        contain: true,
+	        percentPosition: true,
+	        cellAlign: 'center'
+	      });
+	    
 	    //short-partners-carousel
 	    if ($(".short-partners-carousel .carousel-items figure").length > 1 || checkSm())
 	      $('.short-partners-carousel .carousel-items').flickity({

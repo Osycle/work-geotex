@@ -22,6 +22,8 @@ $color-gray-1: #d6d6d6;
 $color-gray-2: #777777;
 $color-gray-3: #343434;
 
+
+
 $bg-color-black: #000;
 $bg-color-gray: $color-gray-1;
 
@@ -33,7 +35,10 @@ $bg-color-gray: $color-gray-1;
 	padding-right: 0;
 }
 
-
+.gradient-1{ 
+	background-color: #1a1a1a !important; 
+	background: linear-gradient(to top left, lighten(#393939, 10%), #1a1a1a); 
+}
 
 
 
@@ -578,6 +583,7 @@ table {
 	*{
 		color: inherit;
 	}
+	color: white;
 	&:not([class*="color-"]){
 		//color: black;
 	}
@@ -814,6 +820,7 @@ thined{
 }
 
 .h1-style{
+	border: none;
 	&:not(.h-clear):not(.after-not):after{
 		@extend .claf;
 		height: 2px;
@@ -867,6 +874,8 @@ h1, h2, h3, h4{
 h1{
 	font-size: em(30, 15);
 	margin-bottom: 15px;
+	border-left: 2px solid $color-1;
+	padding-left: 15px;
 	font-weight: 600;
 	@media (max-width: 430px) {
 		font-size: em(33/1.2, 15);
