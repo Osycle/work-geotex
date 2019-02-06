@@ -821,6 +821,7 @@ thined{
 
 .h1-style{
 	border: none;
+	padding-left: 0;
 	&:not(.h-clear):not(.after-not):after{
 		@extend .claf;
 		height: 2px;
@@ -874,9 +875,12 @@ h1, h2, h3, h4{
 h1{
 	font-size: em(30, 15);
 	margin-bottom: 15px;
-	border-left: 2px solid $color-1;
-	padding-left: 15px;
+	
 	font-weight: 600;
+	@media (min-width: 992px) {
+		border-left: 2px solid $color-1;
+		padding-left: 15px;
+	}
 	@media (max-width: 430px) {
 		font-size: em(33/1.2, 15);
 	}

@@ -16,6 +16,7 @@
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-size: cover;
+	background-color: #efefef;
 	&:before{
 		font-size: 150px;
 		position: absolute;
@@ -42,15 +43,22 @@
 	}
 }
 .footer-contacts{
-	[class*="ls-icon-"]{
+	.fa{
 		color: $color-1;
+		width: 35px;
+	}
+	.fa-phone{
+		font-size: 28px;
+	}
+	.fa-envelope{
+		font-size: 25px;	
+	}
+	.fa-map-marker{
+		font-size: 35px;
 	}
 	@media (max-width: 991px) {
 		.flex.align-i-center{
     	flex-direction: column;
-		}
-		.header-phone-icon{
-			margin-bottom: 15px;
 		}
 	}
 }

@@ -70,7 +70,7 @@
 		$mrow: 0;
 		$wid: 100;
 	}
-	#{$tag}{
+	#{$tag}, .boxes-cell{
 		display: inline-block;
 	}
 	&:not(.serried){
