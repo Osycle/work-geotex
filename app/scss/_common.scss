@@ -203,31 +203,21 @@ html{
 			text-decoration: none;
 			color: white;
 		}
-		&.reverse{
-			a{
-				color: rgba(black, 0.4);
-				&:hover{
-					color: white;
-				}
-			}
-			li:before{
-				color: white;
-			}
-		}
 	}
 	a{
 		color: $color-1;
 	}
 	.active{
 		a{
-			color: white;
+			color: black;
 		}
 	}
 	& > li + li:before{
-		color: white;
-		font-family: FontAwesome;
-		content: " / ";
-		font-size: 0.9em;
+		color: black;
+		//font-family: FontAwesome;
+		content: " > ";
+		font-weight: normal;
+		font-size: 1.2em;
 		margin:0  5px;
 	}
 	li{
@@ -733,7 +723,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
-	font: 14px $font-family-1;
+	font: 15px $font-family-1;
 	overflow-x: hidden;
 	//color: white;
 	//height: auto;

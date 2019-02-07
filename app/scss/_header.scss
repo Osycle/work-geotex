@@ -256,6 +256,7 @@ $header-min-menu: 70px;
 	}
 }
 
+
 .menu{
 	font-weight: 500;
 	position: relative;
@@ -747,8 +748,10 @@ textarea.form-control{
 	background-size: cover;
 	border-radius: 0 45px 0 45px;
 	color: white;
+	padding-right: 40px;
+	padding-left: 40px;
 	@media (min-width: 992px) {
-		width: 360px;
+		//width: 360px;
 	}
 	&:before{
 		@extend .claf;
