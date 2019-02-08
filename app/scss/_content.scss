@@ -25,7 +25,7 @@
 	}
 	&.right{
 		transform: rotate(-90deg) translateY(90px);
-		top: 1500px;	
+		top: 1200px;	
 		right: 0;
 	}
 
@@ -356,6 +356,7 @@
 		padding: 0 50px;
 	}
 	figure, .boxes-cell{
+		padding-bottom: 10px;
 		&.is-selected, &:hover{
 			.wrapper{
 				box-shadow: 5px 5px 50px -18px black;	
@@ -434,7 +435,7 @@
 
 //short-about
 .short-about-content{
-	padding: 100px 0;
+	padding: 30px 0;
 	position: relative;
 	//display: flex;
 	.img-content{
@@ -457,9 +458,7 @@
 	}
 	.desc-content{
 		width: 75%;
-		padding-left: 25%;
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding: 60px 15px 60px 25%;
 		background-color: white;
 		margin-left: auto;
 		//padding: 80px 80px 80px 200px;
@@ -538,7 +537,7 @@
 		font-weight: 600;
 		margin: 15px 0;
 		padding: 0 10px;
-		font-size: 1.4em;
+		font-size: 1.3em;
 		color: $color-gray-3;
 	}
 
@@ -764,11 +763,13 @@
 
 
 //production
-.productions-list{
+.products-list{
 	ul{
-		box-shadow: 0 0 20px -8px black;
+		box-shadow: 5px 3px 30px -5px rgba(0, 0, 0, 0.55);
 		li{
-			border-bottom: 1px solid $color-gray-1;
+			&:not(:last-child){
+				border-bottom: 1px solid $color-gray-1;
+			}
 			a{
 				background-color: white;
 				color: black;
@@ -784,14 +785,14 @@
 		}
 	}
 }
-.productions-items{
+.products-items{
 	figure{
 		.wrapper{
 			padding: 12px;
 			padding-bottom: 20px;
 			border: 1px solid $color-gray-1;
 			background-color: white;
-			box-shadow: 0 0 15px -5px black;	
+			box-shadow: 5px 4px 15px -5px rgba(0, 0, 0, 0.48);	
 		}
 		.img{
 			background-size: cover;
@@ -800,7 +801,7 @@
 	}
 	figcaption, h3{
 		position: relative;
-		font-size: 20px;
+		font-size: 1.3em;
 		transition: all 0.3s ease;
 		font-weight: 600;
 		padding: 10px 20px;
@@ -824,6 +825,42 @@
 		}
 		&:hover{
 			color: $color-1;
+		}
+	}
+}
+
+//product
+.product{
+	.flickity-prev-next-button{
+		display: none;
+	}
+	.carousel-main{
+		.img{
+			height: 340px;
+		}
+	}
+	.carousel-article{
+	}
+}
+
+
+
+//factories
+.factories-pictures{
+	.img{
+		background-position: center;
+		height: 200px;
+		background-size: cover;
+	}
+}
+.factories-videos{
+	iframe{
+		width: 100%;
+		position: relative;
+		overflow: hidden !important;
+		height: 424px;
+		@media (max-width: 991px){
+			height: 210px;
 		}
 	}
 }
