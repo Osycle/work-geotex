@@ -122,6 +122,9 @@
 
 
 .entry-header{
+	p{
+		line-height: 170%;
+	}
 	a{
 		color: lighten($color-1, 5%);
 	}
@@ -171,6 +174,8 @@
 		transition: 1s ease;
 	}
 	h1{
+		border-left: 0;
+		padding-left: 0;
 		transform: translateY(-20px);
 		&:after{
 			width: 70px !important;
@@ -837,6 +842,10 @@
 	.carousel-main{
 		.img{
 			height: 340px;
+			background-position: center;
+			@media (max-width: 991px) {
+				height: 220px;
+			}
 		}
 	}
 	.carousel-article{
@@ -862,5 +871,101 @@
 		@media (max-width: 991px){
 			height: 210px;
 		}
+	}
+}
+
+
+
+
+
+
+//projects
+.projects{
+	.tablist{
+		@extend .letter-none;
+		@extend .btn-opacity;
+		@extend .flex-adaptive;
+		justify-content: center;
+		border: none;
+		a{
+			display: block;
+		}
+		li{
+			width: 100%;
+			font-size: 0.95em;
+			display: inline-block;
+			color: black;
+			font-weight: 500;
+			background-color: lighten($color-gray-1, 5%);
+			&.active{
+				background-color: $color-1;
+				color: white;
+			}
+		}
+	}
+	.tab-content{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+.projects-items{
+	.wrapper{
+		@extend .flex-adaptive;
+	}
+	.desc-content{
+		h4{
+			margin-top: 0;
+		}
+	}
+	.img-content, .desc-content{
+		margin: 15px 0; 
+	}
+	.img{
+		height: 180px;
+		background-size: contain;
+		background-position: center;
+		width: 220px;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+}
+
+//certifications
+.certifications-carousel{
+	.flickity-btn-1 .flickity-prev-next-button{
+		&.previous{
+			top: auto;
+			left: auto;
+			right: 45px;
+			bottom: -55px;
+		}
+		&.next{
+			top: auto;
+			right: 0;
+			bottom: -55px;
+			
+		}
+	}	
+	figure{
+		img{
+			width: 100%;
+		}
+		&.is-selected{
+			.wrapper{
+				transform: translateY(-5px) scale(1);
+			}
+		}
+	}
+	.wrapper{
+		transition: all 0.3s ease;
+		transform: scale(0.9);
+	}
+	.flickity-page-dots{
+		text-align: left;
+		padding-right: 110px;
+	}
+	.flickity-viewport{
+		padding: 0 15px;
 	}
 }

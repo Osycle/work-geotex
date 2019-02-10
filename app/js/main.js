@@ -8,13 +8,15 @@
 
 
 		/*AOS*/
-		AOS.init({
-			offset: 100,
-			once: true,
-			duration: 1100,
-			delay: 150
-		});
-		setTimeout(function() { AOS.refresh(); }, 1);
+		if( "AOS" in window ){
+			AOS.init({
+				offset: 100,
+				once: true,
+				duration: 1100,
+				delay: 150
+			});
+			setTimeout(function() { AOS.refresh(); }, 1);
+		}
 
 
 		/* SELECT2 */
@@ -48,10 +50,11 @@
 				transitionEffect: "zoom-in-out"
 			});
 		// SMOTHSCROLL-LINK
-		smoothScroll.init({
-			easing: 'easeInOutCubic',
-			offset: 85
-		});
+		if( "smoothScroll" in window )
+			smoothScroll.init({
+				easing: 'easeInOutCubic',
+				offset: 85
+			});
 		/*ELEVATEZOOM*/
 		if ( !checkSm() && $("[data-zoom-image]:not([group])").length )
 			var x = $("[data-zoom-image]:not([group])").elevateZoom({
@@ -253,8 +256,26 @@
 	      });
 
     	
-
-
+	    //certifications-carousel
+	    if ($(".certifications-carousel .carousel-items figure").length > 4 || checkSm())
+	      $('.certifications-carousel .carousel-items').flickity({
+	        imagesLoaded: true,
+	        autoPlay: 3000,
+	        //groupCells: 3,
+	        freeScroll: false,
+	        pauseAutoPlayOnHover: true,
+	        arrowShape: arrowStyle,
+	        initialIndex: 2,
+	        prevNextButtons: true,
+	        draggable: false,
+	        adaptiveHeight: false, 
+	        wrapAround: false,
+	        pageDots: !checkSm(),
+	        contain: true,
+	        percentPosition: true,
+	        cellAlign: 'center'
+	      });
+	    
 
 
 
@@ -372,14 +393,7 @@
 		});
 		$(window).trigger("scroll");
 
-		$(window).on("mousewheel", function(event) {
-			if (!headerRange) return;
-			if (event.originalEvent.wheelDelta >= 0) {
-				minMenu.removeClass("up");
-			} else {
-				minMenu.addClass("up");
-			}
-		});
+
 
 
 

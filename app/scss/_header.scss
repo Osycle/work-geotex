@@ -76,6 +76,7 @@ $header-min-menu: 70px;
 		width: 190px;
 		white-space: normal;
 		font-size: 1.1em;
+		box-shadow: 0 11px 16px -4px rgba($color-1, 0.5);
 		&:hover{
 			background-color: darken($color-2, 5%) !important; 
 			a{

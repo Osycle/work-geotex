@@ -170,13 +170,13 @@ html{
 /* BOX */
 @for $i from 0 through 10 {
 	.box-xs-#{$i} { 
-		width: 10*$i+%;
+		width: 10*$i#{"%"};
 	}
 }
 @media (min-width:768px){
 	@for $i from 0 through 10{
 		.box-sm-#{$i} {
-			width: 10*$i+%;
+			width: 10*$i#{"%"};
 		}
 	}
 }
@@ -184,7 +184,7 @@ html{
 @media (min-width:992px){
 	@for $i from 0 through 10{
 		.box-md-#{$i} {
-			width: 10*$i+%;
+			width: 10*$i#{"%"};
 		}
 	}
 }
@@ -193,8 +193,8 @@ html{
 @media (min-width:1200px){
 	@for $i from 0 through 12{
 		.box-lg-#{$i} {
-			width: 10*$i+%;
-			//flex-basis: ( ($i*100) /12)+%;
+			width: 10*$i#{"%"};
+			//flex-basis: ( ($i*100) /12)#{"%"};
 		}
 	}
 }
@@ -207,11 +207,24 @@ html{
 
 
 // FLEX
+.flex-content, .flex-adaptive, .flex-def{
+	display: flex;
+}
 .flex-content{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	position: relative;
+}
+.flex-adaptive, .flex-def{
+	@media (max-width: 991px ) {
+		flex-direction: column;	
+	}
+}
+.flex-def{
+	& > div, & > figure:not([class*="box-"]):not([class*="col-"]){
+		width: 100%;
+	}
 }
 .align-i-center{
 	align-items: center;
@@ -234,15 +247,8 @@ html{
 
 
 
-.flex-def{
-	display: flex;
-	& > div, & > figure:not([class*="box-"]):not([class*="col-"]){
-		width: 100%;
-	}
-	@media (max-width: 991px ) {
-		flex-direction: column;	
-	}
-}
+
+
 .justify-c-center{ justify-content: center; }
 .justify-c-between{ justify-content: space-between; }
 .justify-c-start{ justify-content: flex-start; }
@@ -251,14 +257,14 @@ html{
 
 @for $i from 0 through 12{
 	.flexbasis-xs-#{$i} {
-		flex-basis: ( ($i*100) /12)+%;
+		flex-basis: ( ($i*100) /12)#{"%"};
 	}
 }
 
 @media (min-width:768px){
 	@for $i from 0 through 12{
 		.flexbasis-sm-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
+			flex-basis: ( ($i*100) /12)#{"%"};
 		}
 	}
 }
@@ -266,7 +272,7 @@ html{
 @media (min-width:992px){
 	@for $i from 0 through 12{
 		.flexbasis-md-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
+			flex-basis: ( ($i*100) /12)#{"%"};
 		}
 	}
 }
@@ -275,7 +281,7 @@ html{
 @media (min-width:1200px){
 	@for $i from 0 through 12{
 		.flexbasis-lg-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
+			flex-basis: ( ($i*100) /12)#{"%"};
 		}
 	}
 }
@@ -307,7 +313,7 @@ html{
 @for $i from 0 through 8{
 	.flexboxes-#{$i}{
 		figure, .flexboxes-item{
-			flex-basis: (100/$i)+%;
+			flex-basis: (100/$i)#{"%"};
 		}
 	}
 }
@@ -315,24 +321,24 @@ html{
 @media ( max-width:991px ){
 	.flexboxes-2{
 		figure, .flexboxes-item{
-			flex-basis: (100/1)+%;
+			flex-basis: (100/1)#{"%"};
 		}
 	}
 	.flexboxes-3, .flexboxes-4, .flexboxes-5{
 		figure, .flexboxes-item{
-			flex-basis: (100/2)+%;
+			flex-basis: (100/2)#{"%"};
 		}
 	}
 	.flexboxes-5, .flexboxes-6{
 		figure, .flexboxes-item{
-			flex-basis: (100/3)+%;
+			flex-basis: (100/3)#{"%"};
 		}
 	}
 }
 @media ( max-width: 460px ){
 	.flexboxes-3, .flexboxes-4, .flexboxes-5, .flexboxes-5, .flexboxes-6{
 		figure, .flexboxes-item{
-			flex-basis: (100/1)+%;
+			flex-basis: (100/1)#{"%"};
 		}
 	}
 }
@@ -432,14 +438,14 @@ html{
 	@for $i from 12 through 1 {
 
 		.col-md-offset-left-#{$i} { 
-			margin-left: 100/12*$i+%;
+			margin-left: 100/12*$i#{"%"};
 		}
 
 	}
 	@for $i from 1 through 12 {
 
 		.col-md-offset-right-#{$i} { 
-			margin-right: 100/12*$i+%;
+			margin-right: 100/12*$i#{"%"};
 		}
 
 	}
@@ -452,14 +458,14 @@ html{
 	@for $i from 12 through 1 {
 
 		.col-sm-offset-left-#{$i} { 
-			margin-left: 100/12*$i+%;
+			margin-left: 100/12*$i#{"%"};
 		}
 
 	}
 	@for $i from 1 through 12 {
 
 		.col-sm-offset-right-#{$i} { 
-			margin-right: 100/12*$i+%;
+			margin-right: 100/12*$i#{"%"};
 		}
 
 	}
