@@ -2801,7 +2801,7 @@ template {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   line-height: 1.42857; }
@@ -6860,7 +6860,7 @@ tbody.collapse.in {
   background-color: rgba(255, 255, 255, 0.5); }
 
 html {
-  -ms-scrollbar-track-color: rgba(0, 0, 0, 0);
+  -ms-scrollbar-track-color: transparent;
   -ms-scrollbar-face-color: #ed1c24;
   -ms-scrollbar-shadow-color: #ed1c24;
   -ms-scrollbar-base-color: #ef343b;
@@ -7566,8 +7566,6 @@ table {
   margin-top: 5px;
   font-weight: 500;
   text-align: center;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -8041,7 +8039,8 @@ label {
 
 .header-logo {
   padding-top: 5px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  width: 29%; }
   .header-logo img {
     display: inline-block;
     vertical-align: middle;
@@ -8350,17 +8349,14 @@ ul[class*="sub-menu"] {
   -webkit-background-size: 600px 600px;
   background-size: 600px;
   background-position: right; }
-
-.search-nav-content .search-input {
-  border: 1px solid rgba(214, 214, 214, 0.2) !important; }
-
-.search-nav-content .fa {
-  color: white !important; }
-
-.search-nav-content input {
-  background-color: transparent;
-  border: none;
-  color: white; }
+  #min-menu .search-nav-content .search-input {
+    border: 1px solid rgba(214, 214, 214, 0.2) !important; }
+  #min-menu .search-nav-content .fa {
+    color: white !important; }
+  #min-menu .search-nav-content input {
+    background-color: transparent;
+    border: none;
+    color: white; }
 
 .min-menu-lang li {
   text-decoration: underline; }
@@ -8664,8 +8660,8 @@ textarea.form-control {
     -webkit-box-shadow: -1px 7px 40px -7px rgba(0, 0, 0, 0.6);
     box-shadow: -1px 7px 40px -7px rgba(0, 0, 0, 0.6); }
     .form-def .btn-def:active {
-      -webkit-box-shadow: -1px 7px 40px -7px rgba(0, 0, 0, 0);
-      box-shadow: -1px 7px 40px -7px rgba(0, 0, 0, 0); }
+      -webkit-box-shadow: -1px 7px 40px -7px transparent;
+      box-shadow: -1px 7px 40px -7px transparent; }
     .form-def .btn-def:hover {
       background-color: white !important; }
 
@@ -9339,6 +9335,7 @@ input.feedback-control {
 .date-box {
   z-index: 1;
   top: 0;
+  left: 0;
   position: absolute;
   display: inline-block;
   -webkit-transform: translate(-5px, 0);

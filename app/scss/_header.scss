@@ -104,6 +104,7 @@ $header-min-menu: 70px;
 .header-logo {
 	padding-top: 5px;
   padding-bottom: 5px;	
+  width: 29%;
 	img{
 		display: inline-block;
 		vertical-align: middle;
@@ -441,18 +442,18 @@ ul[class*="sub-menu"]{
 	//background-color: $color-1;
 	background-size: 600px;
 	background-position: right;
-}
-.search-nav-content{
-	.search-input{
-		border: 1px solid rgba($color-gray-1, 0.2) !important;
-	}
-	.fa{
-		color: white !important;
-	}
-	input{
-		background-color: transparent;
-		border: none;
-		color: white;
+	.search-nav-content{
+		.search-input{
+			border: 1px solid rgba($color-gray-1, 0.2) !important;
+		}
+		.fa{
+			color: white !important;
+		}
+		input{
+			background-color: transparent;
+			border: none;
+			color: white;
+		}
 	}
 }
 .min-menu-lang{
