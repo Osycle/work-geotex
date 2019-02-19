@@ -8035,6 +8035,7 @@ label {
   padding-right: 15px;
   text-align: right; }
   .header-bottom-logo img {
+    display: none;
     height: 50px; }
 
 .header-logo {
@@ -8185,7 +8186,8 @@ label {
   font-weight: 500;
   position: relative;
   font-weight: 600;
-  height: 100%; }
+  height: 100%;
+  font-size: 0.9em; }
   .menu nav {
     white-space: nowrap;
     height: 100%; }

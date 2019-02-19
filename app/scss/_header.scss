@@ -96,6 +96,7 @@ $header-min-menu: 70px;
 	padding-right: 15px;
 	text-align: right;
 	img{
+		display: none;
     @extend .filter-white;
     height: 50px;
 	}
@@ -264,6 +265,7 @@ $header-min-menu: 70px;
 	position: relative;
 	font-weight: 600;
 	height: 100%;
+	font-size: 0.9em;
 	nav{
 		white-space: nowrap;
 		height: 100%;
